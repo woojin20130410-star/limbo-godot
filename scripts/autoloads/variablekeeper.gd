@@ -13,6 +13,7 @@ var hide_border_on_maximize := true
 var physics_process := true
 var small_height_resolution := false
 var main_saved_values
+var shuffle_speed := 0.3
 
 func checkvar(varname : String) -> bool:
 	var truth := false
