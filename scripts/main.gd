@@ -272,18 +272,18 @@ func _ready():
 				var shufflepattern = get_random_pattern(excluded_pattern)
 				
 				if i == 6: # 6th swap, bottom 4 swap with top 4
-					queueshufflewindow(18, 2 * window_shuffle_delay, 0.5)
+					queueshufflewindow(18, 2 * window_shuffle_delay, VariableKeeper.shuffle_speed * 1.67)
 				elif i == 10:
 					# 10th swap, bottom 6 rotated then become top 6. previous top 2 rotated then become bottom 2.
 					# all key rotated in place becoming upside down
-					queueshufflewindow(8, 2 * window_shuffle_delay, 0.5)
+					queueshufflewindow(8, 2 * window_shuffle_delay, VariableKeeper.shuffle_speed * 1.67)
 				elif i == 19: # 19th swap, the opposite of 6th swap
-					queueshufflewindow(9, 2 * window_shuffle_delay, 0.5)
+					queueshufflewindow(9, 2 * window_shuffle_delay, VariableKeeper.shuffle_speed * 1.67)
 				elif i == 26:
 					queueshufflewindow(20, window_shuffle_delay, 0.1)
 					print("endmove queued")
 				else:
-					queueshufflewindow(shufflepattern, window_shuffle_delay, 0.3)
+					queueshufflewindow(shufflepattern, window_shuffle_delay, VariableKeeper.shuffle_speed)
 				i += 1
 			
 			KeyManager.allwindow_moving()
